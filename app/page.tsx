@@ -131,9 +131,9 @@ export default function Home() {
 function HeroWordmark() {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Parallax S-logo hero background */}
+      {/* Parallax S-logo hero background — higher on mobile */}
       <div
-        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center pt-[22vh]"
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center pt-[6vh] md:pt-[22vh]"
         aria-hidden
       >
         <ParallaxHeroBackground
@@ -142,8 +142,8 @@ function HeroWordmark() {
         />
       </div>
 
-      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
-        <Link href="/" className="group flex items-center gap-3">
+      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-4 py-6 md:px-8">
+        <Link href="/" className="group -ml-1 flex items-center gap-3 md:ml-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/S-logo.png"
@@ -170,20 +170,34 @@ function HeroWordmark() {
         </nav>
       </header>
 
+      {/* Spotlight overlay — soft blue glow centered on hero */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] flex items-center justify-center"
+        aria-hidden
+      >
+        <div
+          className="h-[80vh] w-[min(100%,900px)] rounded-full opacity-90"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(11,71,255,0.18) 0%, rgba(59,130,246,0.06) 45%, transparent 70%)",
+          }}
+        />
+      </div>
+
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-84px)] max-w-7xl items-center justify-center px-8 py-16">
         <div className="w-full max-w-4xl text-center">
           <div className="mb-6 flex justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/sapphire_transparent.png"
-              alt="The Sapphire crest"
+              src="/images/S-logo.png"
+              alt="The Sapphire"
               width={140}
               height={140}
               className="brightness-0 invert"
             />
           </div>
 
-          <h1 className="text-[clamp(3.75rem,9vw,9.25rem)] font-bold leading-[0.9] tracking-[0.12em]">
+          <h1 className="hero-spotlight-text text-[clamp(3.75rem,9vw,9.25rem)] font-bold leading-[0.9] tracking-[0.12em] [text-shadow:0_0_80px_rgba(11,71,255,0.35)]">
             THE SAPPHIRE
           </h1>
 

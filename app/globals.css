@@ -67,3 +67,44 @@ body {
     animation: none;
   }
 }
+
+/* Spotlight sweep across hero title letters */
+@keyframes hero-spotlight-sweep {
+  0% {
+    background-position: -60% 0, 0 0;
+  }
+  100% {
+    background-position: 160% 0, 0 0;
+  }
+}
+
+.hero-spotlight-text {
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 32%,
+      rgba(255, 255, 255, 0.95) 42%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.95) 58%,
+      transparent 68%,
+      transparent 100%
+    ),
+    linear-gradient(to bottom, #ffffff, #93bfff, #0B47FF);
+  background-size: 80% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: -60% 0, 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hero-spotlight-sweep 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-spotlight-text {
+    animation: none;
+    background-image: linear-gradient(to bottom, #ffffff, #93bfff, #0B47FF);
+    background-size: 100% 100%;
+    background-position: 0 0;
+  }
+}
