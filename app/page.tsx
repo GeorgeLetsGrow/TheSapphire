@@ -208,7 +208,7 @@ function HeroWordmark() {
             />
           </div>
 
-          <h1 className="font-italiana text-[clamp(3.5rem,11vw,11.75rem)] font-normal leading-[0.9] tracking-[0.11em] text-white md:text-[clamp(6.25rem,11vw,11.75rem)]">
+          <h1 className="font-italiana text-[clamp(12vh,14vw,20vh)] font-normal leading-[0.9] tracking-[0.11em] text-white md:text-[clamp(6.25rem,11vw,11.75rem)]">
             THE SAPPHIRE
           </h1>
 
