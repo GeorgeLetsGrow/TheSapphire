@@ -12,6 +12,13 @@
 
   --font-serif: var(--font-cormorant), "Cormorant Garamond", serif;
   --font-sans: var(--font-manrope), "Manrope", system-ui, sans-serif;
+  --font-sora: var(--font-sora), "Sora", sans-serif;
+  --font-playfair: var(--font-playfair), "Playfair Display", serif;
+  --font-italiana: var(--font-italiana), "Italiana", serif;
+  --font-cinzel: var(--font-cinzel), "Cinzel", serif;
+  --font-bodoni: var(--font-bodoni), "Bodoni Moda", serif;
+  --font-lora: var(--font-lora), "Lora", serif;
+  --font-raleway: var(--font-raleway), "Raleway", sans-serif;
 }
 
 html {

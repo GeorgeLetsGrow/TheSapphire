@@ -12,7 +12,7 @@ export default function Home() {
 
       <section id="location" className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20">
         <div className="mb-6">
-          <div className="text-xs font-semibold tracking-[0.32em] text-white/55">LOCATION</div>
+          <div className="text-xs font-medium tracking-[0.32em] text-white/55">LOCATION</div>
           <div className="mt-3 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <h2 className="text-3xl font-semibold tracking-[0.04em] md:text-5xl">Find The Sapphire</h2>
             <a
@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="grid gap-4 lg:grid-cols-[1fr_1.4fr]">
           <div className="rounded-[1.25rem] border border-white/12 bg-white/[0.02] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.35)]">
-            <div className="text-xs font-semibold tracking-[0.32em] text-white/55">ADDRESS</div>
+            <div className="text-xs font-medium tracking-[0.32em] text-white/55">ADDRESS</div>
             <div className="mt-3 text-xl font-semibold tracking-[0.02em] text-white/90">4410 W Boy Scout Blvd</div>
             <div className="mt-1 text-sm text-white/65">Tampa, FL</div>
 
@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 text-center">
-        <div className="text-xs font-semibold tracking-[0.32em] text-white/55">Subscribe</div>
+        <div className="text-xs font-medium tracking-[0.32em] text-white/55">Subscribe</div>
         <p className="mx-auto mt-3 max-w-sm text-[12px] leading-relaxed text-white/40">
           Get 10% off your first purchase when you sign up for our newsletter!
         </p>
@@ -163,7 +163,7 @@ function HeroWordmark() {
             height={80}
             className="brightness-0 invert transition-opacity duration-200 group-hover:opacity-90"
           />
-          <span className="-translate-y-[5px] -translate-x-[30px] text-[11px] tracking-[0.38em] text-white/65 transition-colors duration-200 group-hover:text-white">THE SAPPHIRE TAMPA</span>
+          <span className="-translate-y-[5px] -translate-x-[30px] font-medium text-[11px] tracking-[0.38em] text-white/65 transition-colors duration-200 group-hover:text-white">THE SAPPHIRE TAMPA</span>
         </Link>
         <nav className="flex items-center gap-3">
           <a
@@ -208,8 +208,9 @@ function HeroWordmark() {
             />
           </div>
 
-          <h1 className="text-[clamp(3.75rem,9vw,9.25rem)] font-bold leading-[0.9] tracking-[0.12em] text-white">
-            THE SAPPHIRE
+          <h1 className="font-italiana text-[clamp(3.75rem,9vw,9.25rem)] font-normal leading-[0.9] text-white">
+            <span className="tracking-[0.12em]">THE </span>
+            <span className="tracking-[0.18em]">SAPPHIRE</span>
           </h1>
 
           <div className="mx-auto mt-8 h-[1px] w-full max-w-[720px] bg-gradient-to-r from-transparent via-white/18 to-transparent" />
@@ -217,7 +218,7 @@ function HeroWordmark() {
 
           <div className="mt-8 text-[11px] tracking-[0.32em] text-white/65">MODERN LUXURY • TAMPA</div>
           <div className="mt-4 flex justify-center">
-            <div className="inline-flex items-center rounded-full bg-white/5 px-4 py-2 text-[11px] font-semibold tracking-[0.32em] text-white/80 ring-1 ring-inset ring-white/10">
+            <div className="inline-flex items-center rounded-full bg-white/5 px-4 py-2 text-[11px] font-medium tracking-[0.32em] text-white/80 ring-1 ring-inset ring-white/10">
               COMING SOON
             </div>
           </div>

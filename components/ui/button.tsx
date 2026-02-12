@@ -15,7 +15,7 @@ export function buttonClassName(options: ButtonClassNameOptions = {}) {
   const { variant = "primary", size = "md", className } = options;
 
   const base =
-    "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold shadow-sm transition";
+    "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium shadow-sm transition";
 
   const focus =
     "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";

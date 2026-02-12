@@ -22,6 +22,13 @@ module.exports = {
       fontFamily: {
         serif: ["var(--font-serif)"],
         sans: ["var(--font-sans)"],
+        sora: ["var(--font-sora)"],
+        playfair: ["var(--font-playfair)"],
+        italiana: ["var(--font-italiana)"],
+        cinzel: ["var(--font-cinzel)"],
+        bodoni: ["var(--font-bodoni)"],
+        lora: ["var(--font-lora)"],
+        raleway: ["var(--font-raleway)"],
       },
     },
   },
