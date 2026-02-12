@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterSignup } from "../components/NewsletterSignup";
 import { ParallaxHeroBackground } from "../components/ParallaxHeroBackground";
 import { buttonClassName } from "../components/ui/button";
 
@@ -65,6 +66,16 @@ export default function Home() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 text-center">
+        <div className="text-xs font-semibold tracking-[0.32em] text-white/55">Subscribe</div>
+        <p className="mx-auto mt-3 max-w-sm text-[12px] leading-relaxed text-white/40">
+          Get 10% off your first purchase when you sign up for our newsletter!
+        </p>
+        <div className="mt-4 flex justify-center">
+          <NewsletterSignup />
         </div>
       </section>
 
@@ -143,7 +154,7 @@ function HeroWordmark() {
       </div>
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-4 py-6 md:px-8">
-        <Link href="/" className="group -ml-[10px] flex items-center gap-3 md:ml-0">
+        <Link href="/" className="group -ml-[25px] flex items-center gap-3 md:ml-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/S-logo.png"
