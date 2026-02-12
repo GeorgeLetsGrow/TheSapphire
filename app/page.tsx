@@ -143,7 +143,7 @@ function HeroWordmark() {
       </div>
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-4 py-6 md:px-8">
-        <Link href="/" className="group -ml-1 flex items-center gap-3 md:ml-0">
+        <Link href="/" className="group -ml-[10px] flex items-center gap-3 md:ml-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/S-logo.png"
