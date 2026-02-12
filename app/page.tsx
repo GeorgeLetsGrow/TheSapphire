@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ParallaxHeroBackground } from "../components/ParallaxHeroBackground";
 import { buttonClassName } from "../components/ui/button";
 
 export default function Home() {
@@ -71,7 +72,14 @@ export default function Home() {
         <div className="h-[1px] w-full bg-white/10" />
         <div className="mt-8 flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-[#0B47FF]" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/S-logo.png"
+              alt="The Sapphire Tampa"
+              width={40}
+              height={40}
+              className="brightness-0 invert"
+            />
             <span className="text-[11px] tracking-[0.38em] text-white/50">THE SAPPHIRE TAMPA</span>
           </div>
 
@@ -122,12 +130,30 @@ export default function Home() {
 
 function HeroWordmark() {
   return (
-    <section className="relative min-h-screen">
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Parallax S-logo hero background */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center pt-[22vh]"
+        aria-hidden
+      >
+        <ParallaxHeroBackground
+          src="/images/S-logo.png"
+          className="h-[min(240vmin,2400px)] w-[min(240vmin,2400px)] max-w-none opacity-[0.06] brightness-0 invert object-contain will-change-transform"
+        />
+      </div>
+
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
-        <div className="flex items-center gap-3">
-          <span className="h-2 w-2 rounded-full bg-[#0B47FF]" />
-          <span className="text-[11px] tracking-[0.38em] text-white/65">THE SAPPHIRE TAMPA</span>
-        </div>
+        <Link href="/" className="group flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/S-logo.png"
+            alt="The Sapphire Tampa"
+            width={80}
+            height={80}
+            className="brightness-0 invert transition-opacity duration-200 group-hover:opacity-90"
+          />
+          <span className="-translate-y-[5px] -translate-x-[30px] text-[11px] tracking-[0.38em] text-white/65 transition-colors duration-200 group-hover:text-white">THE SAPPHIRE TAMPA</span>
+        </Link>
         <nav className="flex items-center gap-3">
           <a
             href="#location"
@@ -146,6 +172,17 @@ function HeroWordmark() {
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-84px)] max-w-7xl items-center justify-center px-8 py-16">
         <div className="w-full max-w-4xl text-center">
+          <div className="mb-6 flex justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/sapphire_transparent.png"
+              alt="The Sapphire crest"
+              width={140}
+              height={140}
+              className="brightness-0 invert"
+            />
+          </div>
+
           <h1 className="text-[clamp(3.75rem,9vw,9.25rem)] font-bold leading-[0.9] tracking-[0.12em]">
             THE SAPPHIRE
           </h1>
