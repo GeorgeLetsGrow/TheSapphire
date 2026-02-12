@@ -184,9 +184,9 @@ function HeroWordmark() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-84px)] max-w-7xl items-center justify-center px-8 py-16">
-        <div className="w-full max-w-4xl text-center">
-          <div className="mb-6 flex justify-center">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-84px)] max-w-7xl items-start justify-center px-8 py-8 md:items-center md:py-16">
+        <div className="w-full max-w-4xl -mt-6 text-center md:mt-0">
+          <div className="mb-1 flex justify-center md:mb-1">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/S-logo.png"
@@ -197,7 +197,7 @@ function HeroWordmark() {
             />
           </div>
 
-          <h1 className="hero-spotlight-text text-[clamp(3.75rem,9vw,9.25rem)] font-bold leading-[0.9] tracking-[0.12em] [text-shadow:0_0_80px_rgba(11,71,255,0.35)]">
+          <h1 className="text-[clamp(3.75rem,9vw,9.25rem)] font-bold leading-[0.9] tracking-[0.12em] text-white">
             THE SAPPHIRE
           </h1>
 
