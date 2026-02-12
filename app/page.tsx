@@ -153,7 +153,7 @@ function HeroWordmark() {
         />
       </div>
 
-      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-4 py-6 md:px-8">
+      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-6">
         <Link href="/" className="group -ml-[25px] flex items-center gap-3 md:ml-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -208,7 +208,7 @@ function HeroWordmark() {
             />
           </div>
 
-          <h1 className="font-italiana text-[clamp(12vh,14vw,20vh)] font-normal leading-[0.9] tracking-[0.11em] text-white md:text-[clamp(6.25rem,11vw,11.75rem)]">
+          <h1 className="font-italiana text-[3.75rem] font-normal leading-[0.9] tracking-[0.11em] text-white md:text-[clamp(6.25rem,11vw,11.75rem)]">
             THE SAPPHIRE
           </h1>
 
