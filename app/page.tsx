@@ -2,13 +2,15 @@ import Link from "next/link";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { ParallaxHeroBackground } from "../components/ParallaxHeroBackground";
 import { buttonClassName } from "../components/ui/button";
+import { getHomeContent } from "../lib/content";
 
 export default function Home() {
+  const content = getHomeContent();
   return (
     <main className="relative min-h-screen bg-[#06080F] text-white">
       <SapphireBackdrop />
 
-      <HeroWordmark />
+      <HeroWordmark content={content} />
 
       <section id="location" className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20">
         <div className="mb-6">
@@ -16,7 +18,7 @@ export default function Home() {
           <div className="mt-3 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <h2 className="text-3xl font-semibold tracking-[0.04em] md:text-5xl">Find The Sapphire</h2>
             <a
-              href="https://maps.google.com/?q=4410+W+Boy+Scout+Blvd+Tampa+FL"
+              href={content.location.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-white/70 underline underline-offset-4 transition hover:text-white"
@@ -29,12 +31,16 @@ export default function Home() {
         <div className="grid gap-4 lg:grid-cols-[1fr_1.4fr]">
           <div className="rounded-[1.25rem] border border-white/12 bg-white/[0.02] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.35)]">
             <div className="text-xs font-medium tracking-[0.32em] text-white/55">ADDRESS</div>
-            <div className="mt-3 text-xl font-semibold tracking-[0.02em] text-white/90">4410 W Boy Scout Blvd</div>
-            <div className="mt-1 text-sm text-white/65">Tampa, FL</div>
+            <div className="mt-3 text-xl font-semibold tracking-[0.02em] text-white/90" data-sb-field-path="location.address">
+              {content.location.address}
+            </div>
+            <div className="mt-1 text-sm text-white/65" data-sb-field-path="location.city">
+              {content.location.city}
+            </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://maps.google.com/?q=4410+W+Boy+Scout+Blvd+Tampa+FL"
+                href={content.location.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={buttonClassName({ variant: "primary", size: "lg" })}
@@ -42,7 +48,7 @@ export default function Home() {
                 DIRECTIONS
               </a>
               <a
-                href="https://maps.google.com/?q=4410+W+Boy+Scout+Blvd+Tampa+FL"
+                href={content.location.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={buttonClassName({ variant: "secondary", size: "lg" })}
@@ -60,7 +66,7 @@ export default function Home() {
           <div className="overflow-hidden rounded-[1.25rem] border border-white/12 bg-black/25 shadow-[0_24px_90px_rgba(0,0,0,0.45)]">
             <iframe
               title="The Sapphire Tampa location"
-              src="https://www.google.com/maps?q=4410+W+Boy+Scout+Blvd+Tampa+FL&output=embed"
+              src={`${content.location.mapUrl}&output=embed`}
               className="h-[380px] w-full md:h-[460px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -70,9 +76,11 @@ export default function Home() {
       </section>
 
       <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 text-center">
-        <div className="text-xs font-medium tracking-[0.32em] text-white/55">Subscribe</div>
-        <p className="mx-auto mt-3 max-w-sm text-[12px] leading-relaxed text-white/40">
-          Get 10% off your first purchase when you sign up for our newsletter!
+        <div className="text-xs font-medium tracking-[0.32em] text-white/55" data-sb-field-path="newsletter.heading">
+          {content.newsletter.heading}
+        </div>
+        <p className="mx-auto mt-3 max-w-sm text-[12px] leading-relaxed text-white/40" data-sb-field-path="newsletter.description">
+          {content.newsletter.description}
         </p>
         <div className="mt-4 flex justify-center">
           <NewsletterSignup />
@@ -139,7 +147,7 @@ export default function Home() {
   );
 }
 
-function HeroWordmark() {
+function HeroWordmark({ content }: { content: ReturnType<typeof getHomeContent> }) {
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Parallax S-logo hero background — higher on mobile */}
@@ -208,22 +216,24 @@ function HeroWordmark() {
             />
           </div>
 
-          <h1 className="font-italiana text-[3.75rem] font-normal leading-[0.9] tracking-[0.11em] text-white md:text-[clamp(6.25rem,11vw,11.75rem)]">
-            THE SAPPHIRE
+          <h1 className="font-italiana text-[3.75rem] font-normal leading-[0.9] tracking-[0.11em] text-white md:text-[clamp(6.25rem,11vw,11.75rem)]" data-sb-field-path="hero.title">
+            {content.hero.title}
           </h1>
 
           <div className="mx-auto mt-8 h-[1px] w-full max-w-[720px] bg-gradient-to-r from-transparent via-white/18 to-transparent" />
           <div className="mx-auto mt-[6px] h-[1px] w-2/3 max-w-[520px] bg-gradient-to-r from-transparent via-[#0B47FF]/35 to-transparent" />
 
-          <div className="mt-8 text-[11px] tracking-[0.32em] text-white/65">MODERN LUXURY • TAMPA</div>
+          <div className="mt-8 text-[11px] tracking-[0.32em] text-white/65" data-sb-field-path="hero.subtitle">
+            {content.hero.subtitle}
+          </div>
           <div className="mt-4 flex justify-center">
             <div className="inline-flex items-center rounded-full bg-white/5 px-4 py-2 text-[11px] font-medium tracking-[0.32em] text-white/80 ring-1 ring-inset ring-white/10">
               COMING SOON
             </div>
           </div>
 
-          <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
-            A refined nightlife destination built for atmosphere, premium service, and unforgettable entertainment.
+          <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base" data-sb-field-path="hero.description">
+            {content.hero.description}
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -237,7 +247,7 @@ function HeroWordmark() {
               href="#location"
               className={buttonClassName({ variant: "secondary", size: "lg", className: "px-9" })}
             >
-              4410 W Boy Scout Blvd
+              {content.location.address}
             </a>
           </div>
         </div>

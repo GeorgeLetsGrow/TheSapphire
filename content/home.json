@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "THE SAPPHIRE",
+    "subtitle": "MODERN LUXURY • TAMPA",
+    "description": "A refined nightlife destination built for atmosphere, premium service, and unforgettable entertainment."
+  },
+  "location": {
+    "address": "4410 W Boy Scout Blvd",
+    "city": "Tampa, FL",
+    "mapUrl": "https://maps.google.com/?q=4410+W+Boy+Scout+Blvd+Tampa+FL"
+  },
+  "newsletter": {
+    "heading": "Subscribe",
+    "description": "Get 10% off your first purchase when you sign up for our newsletter!"
+  }
+}
